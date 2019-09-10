@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+}
+
+main {
+    width: 100%;
+}
+
+.header {
+    /*background-color: #37474f;*/
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    border-bottom-color: red;
+}
+
+.header__logo {
+    width: 95px;
+    height: 40px;
+}
+
+.header__courseName {
+    flex: 1;
+    margin-left: 10px;
+    font-family: PT Root UI, serif;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.header__menu {
+    width: 40px;
+    height: 40px;
+}
+
+h1 {
+    font-family: PT Root UI, serif;
+    font-size: 38px;
+    line-height: 50px;
+    padding: 20px 0;
+    margin: 0 20px;
+}
+
+.article {
+    margin: 0 20px;
+}
+
+.article_with-border {
+    border-top: 1px solid lightgray;
+}
+
+.article__header {
+    font-family: PT Root UI, serif;
+    font-size: 30px;
+    line-height: 40px;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.article__sections {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.article__sections > * {
+    margin-block-end: 1rem;
+}
+
+.card__with-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    max-width: 16em;
+    padding-block-start: 1em;
+    padding-block-end: 1em;
+    padding-inline-start: 1em;
+    padding-inline-end: 1em;
+}
+
+.card__with-image_dark {
+    background: #171717;
+    border-radius: 5px;
+}
+
+.card__with-image__image {
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+}
+
+.card__with-image__hr {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    opacity: .1;
+    margin-block-start: 1em;
+}
+
+.card__with-image__hr_withoutMargin {
+    margin-block-start: 0;
+}
+
+.card__with-image__hr_dark {
+    opacity: .1;
+    background-color: grey;
+}
+
+.card__with-image__description {
+    align-self: flex-start;
+}
+
+.card__with-image__description_dark {
+    color: white;
+}
+
+.card__with-features {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+}
+
+.card__with-features > * {
+    flex: 1;
+}
+
+.card__with-features__features {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__with-features__image {
+    width: 100%;
+    height: auto;
+}
+
+.card__with-features__image-container {
+
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+.feature__image {
+    margin-inline-end: 1em;
+}
+
+.article__sections_column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+@media (max-width: 720px) {
+
+    .new-design .card__with-image {
+        flex: 1 44%;
+    }
+
+    .accessories .article__sections > * {
+        flex: 1 44%;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-family: PT Root UI;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .article__sections > * {
+        margin-inline-end: 0;
+    }
+
+    .new-design .card__with-image_dark.card__with-image-wide {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .new-design .card__with-image-narrow {
+        order: 2;
+        flex: 1;
+    }
+
+    .new-design .card__with-image-wide {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .accessories .card__with-image-wide {
+        flex-basis: 100%;
+    }
+
+    .accessories .card__with-image-narrow {
+        flex: 1;
+    }
+
+    .card__with-features {
+        flex-direction: column;
+    }
+
+    .card__with-features .feature {
+        flex-direction: column;
+    }
+
+    .card__with-features .feature__image {
+        margin-inline-end: 0;
+    }
+
+    .card__with-features .card__with-features__image-container {
+        width: 100%;
+    }
+
+    .application-Samsung .article__sections .card__with-image:nth-child(1n) {
+        width: 100%;
+    }
+
+    .application-Samsung .article__sections .card__with-image:nth-child(1n):not(:last-child) {
+        border-bottom: 1px solid lightgray;
+    }
+
+    .application-Samsung .article__sections .card__with-image:nth-child(odd) {
+        flex-direction: row;
+    }
+
+    .application-Samsung .article__sections .card__with-image:nth-child(odd) .card__with-image__image {
+        margin-inline-end: 1em;
+    }
+
+    .application-Samsung .article__sections .card__with-image:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .application-Samsung .article__sections .card__with-image:nth-child(even) .card__with-image__image {
+        margin-inline-start: 1em;
+    }
+}
+
+
+
