@@ -12,9 +12,11 @@ main {
     align-items: center;
     border-bottom: 1px solid lightgray;
 }
-.card_hr_red-grey {
-    background-image: linear-gradient(to right, red 10%, lightgrey 90%);
-    height: 3px;
+
+.hr_red {
+    height: .2em;
+    background-color: #D70E2A;
+    width: 30%;
 }
 
 .header__logo {
@@ -68,6 +70,25 @@ h1 {
 
 .article__sections > * {
     margin-block-end: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    max-width: 16em;
+    padding-block-start: 1em;
+    padding-block-end: 1em;
+    padding-inline-start: 1em;
+    padding-inline-end: 1em;
+}
+
+.card__hr {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    opacity: .1;
 }
 
 .card__with-image {
@@ -181,26 +202,26 @@ h1 {
         margin-inline-end: 0;
     }
 
-    .new-design .card__with-image_dark .card__with-image-wide {
+    .new-design .card__with-image_dark.card__with-image_wide {
         order: 1;
         flex-basis: 100%;
     }
 
-    .new-design .card__with-image-narrow {
+    .new-design .card__with-image_narrow {
         order: 2;
         flex: 1;
     }
 
-    .new-design .card__with-image-wide {
+    .new-design .card__with-image_wide {
         order: 3;
         flex-basis: 100%;
     }
 
-    .accessories .card__with-image-wide {
+    .accessories .card__with-image_wide {
         flex-basis: 100%;
     }
 
-    .accessories .card__with-image-narrow {
+    .accessories .card-narrow {
         flex: 1;
     }
 
